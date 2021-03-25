@@ -1,0 +1,8 @@
+package TesttForDataToWrite;
+
+public class postrequest {
+	public void send(CReq creq) {
+		
+	}
+
+}

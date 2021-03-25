@@ -1,0 +1,11 @@
+package TesttForDataToWrite;
+import java.net.HttpURLConnection;
+import DataToWrite.CReq;
+
+public class postrequest {
+	public void send(CReq creq) {
+		HttpClient 
+		
+	}
+
+}

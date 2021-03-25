@@ -1,0 +1,297 @@
+package DataToWrite;
+
+
+public class AReq {
+	private String threeDSCompInd;
+	private String threeDSRequestorAuthenticationInd;
+	private String threeDSRequestorID;
+	private String threeDSRequestorName;
+	private String threeDSRequestorURL;
+	private String threeDSServerRefNumber;
+	private String threeDSServerTransID;
+	private String threeDSServerURL;
+	private String acquirerBIN;// important
+	private String acquirerMerchantID;// important
+	private String browserAcceptHeader;
+	private boolean browserJavascriptEnabled;
+	private String browserLanguage;
+	private String browserUserAgent;
+	private String acctNumber;// important
+	private String deviceChannel;
+	private String dsReferenceNumber;// important
+	private String dsTransID;// important
+	private String dsURL;// important
+	private String mcc;
+	private String merchantCountryCode;
+	private String merchantName;
+	private String messageCategor;
+	private String messageType;
+	private String messageVersion;
+	private String notificationURL;
+	private String purchaseAmount;
+	private String purchaseCurrency;// important
+	private String purchaseDate;// important
+	private String purchaseExponent;
+	private String homePhone;
+	private String mes;
+	
+	
+	public AReq() {}
+	public AReq(String threeDSCompInd, String threeDSRequestorAuthenticationInd, String threeDSRequestorID,
+			String threeDSRequestorName, String threeDSRequestorURL, String threeDSServerRefNumber,
+			String threeDSServerTransID, String threeDSServerURL, String acquirerBIN, String acquirerMerchantID,
+			String browserAcceptHeader, boolean browserJavascriptEnabled, String browserLanguage,
+			String browserUserAgent, String acctNumber, String deviceChannel, String dsReferenceNumber,
+			String dsTransID, String dsURL, String mcc, String merchantCountryCode, String merchantName,
+			String messageCategor, String messageType, String messageVersion, String notificationURL,
+			String purchaseAmount, String purchaseCurrency, String purchaseDate,String purchaseExponent, String Phone) {
+		super();
+		this.setThreeDSCompInd(threeDSCompInd);
+		this.setThreeDSRequestorAuthenticationInd(threeDSRequestorAuthenticationInd);
+		this.setThreeDSRequestorID(threeDSRequestorID);
+		this.setThreeDSRequestorName(threeDSRequestorName);
+		this.setThreeDSRequestorURL(threeDSRequestorURL);
+		this.setThreeDSServerRefNumber(threeDSServerRefNumber);
+		this.setThreeDSServerTransID(threeDSServerTransID);
+		this.setThreeDSServerURL(threeDSServerURL);
+		this.setAcquirerBIN(acquirerBIN);
+		this.setAcquirerMerchantID(acquirerMerchantID);
+		this.setBrowserAcceptHeader(browserAcceptHeader);
+		this.setBrowserJavascriptEnabled(browserJavascriptEnabled);
+		this.setBrowserLanguage(browserLanguage);
+		this.setBrowserUserAgent(browserUserAgent);
+		this.setAcctNumber(acctNumber);
+		this.setDeviceChannel(deviceChannel);
+		this.setDsReferenceNumber(dsReferenceNumber);
+		this.setDsTransID(dsTransID);
+		this.setDsURL(dsURL);
+		this.setMcc(mcc);
+		this.setMerchantCountryCode(merchantCountryCode);
+		this.setMerchantName(merchantName);
+		this.setMessageCategor(messageCategor);
+		this.setMessageType(messageType);
+		this.setMessageVersion(messageVersion);
+		this.setNotificationURL(notificationURL);
+		this.setPurchaseAmount(purchaseAmount);
+		this.setPurchaseCurrency(purchaseCurrency);
+		this.setPurchaseDate(purchaseDate);
+		this.setPurchaseExponent(purchaseExponent);
+		this.setHomePhone(Phone);
+	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "AReq [threeDSCompInd=" + threeDSCompInd + ", threeDSRequestorAuthenticationInd="
+				+ threeDSRequestorAuthenticationInd + ", threeDSRequestorID=" + threeDSRequestorID
+				+ ", threeDSRequestorName=" + threeDSRequestorName + ", threeDSRequestorURL=" + threeDSRequestorURL
+				+ ", threeDSServerRefNumber=" + threeDSServerRefNumber + ", threeDSServerTransID="
+				+ threeDSServerTransID + ", threeDSServerURL=" + threeDSServerURL + ", acquirerBIN=" + acquirerBIN
+				+ ", acquirerMerchantID=" + acquirerMerchantID + ", browserAcceptHeader=" + browserAcceptHeader
+				+ ", browserJavascriptEnabled=" + browserJavascriptEnabled + ", browserLanguage=" + browserLanguage
+				+ ", browserUserAgent=" + browserUserAgent + ", acctNumber=" + acctNumber + ", deviceChannel="
+				+ deviceChannel + ", dsReferenceNumber=" + dsReferenceNumber + ", dsTransID=" + dsTransID + ", dsURL="
+				+ dsURL + ", mcc=" + mcc + ", merchantCountryCode=" + merchantCountryCode + ", merchantName="
+				+ merchantName + ", messageCategor=" + messageCategor + ", messageType=" + messageType
+				+ ", messageVersion=" + messageVersion + ", notificationURL=" + notificationURL + ", purchaseAmount="
+				+ purchaseAmount + ", purchaseCurrency=" + purchaseCurrency + ", purchaseDate=" + purchaseDate
+				+ ", purchaseExponent=" + purchaseExponent + ", homePhone=" + homePhone + "]";
+	}
+
+	public String getThreeDSCompInd() {
+		return threeDSCompInd;
+	}
+	public void setThreeDSCompInd(String threeDSCompInd) {
+		this.threeDSCompInd = threeDSCompInd;
+	}
+	public String getThreeDSRequestorAuthenticationInd() {
+		return threeDSRequestorAuthenticationInd;
+	}
+	public void setThreeDSRequestorAuthenticationInd(String threeDSRequestorAuthenticationInd) {
+		this.threeDSRequestorAuthenticationInd = threeDSRequestorAuthenticationInd;
+	}
+	public String getThreeDSRequestorID() {
+		return threeDSRequestorID;
+	}
+	public void setThreeDSRequestorID(String threeDSRequestorID) {
+		this.threeDSRequestorID = threeDSRequestorID;
+	}
+	public String getThreeDSRequestorName() {
+		return threeDSRequestorName;
+	}
+	public void setThreeDSRequestorName(String threeDSRequestorName) {
+		this.threeDSRequestorName = threeDSRequestorName;
+	}
+	public String getThreeDSRequestorURL() {
+		return threeDSRequestorURL;
+	}
+	public void setThreeDSRequestorURL(String threeDSRequestorURL) {
+		this.threeDSRequestorURL = threeDSRequestorURL;
+	}
+	public String getThreeDSServerRefNumber() {
+		return threeDSServerRefNumber;
+	}
+	public void setThreeDSServerRefNumber(String threeDSServerRefNumber) {
+		this.threeDSServerRefNumber = threeDSServerRefNumber;
+	}
+	public String getThreeDSServerTransID() {
+		return threeDSServerTransID;
+	}
+	public void setThreeDSServerTransID(String threeDSServerTransID) {
+		this.threeDSServerTransID = threeDSServerTransID;
+	}
+	public String getThreeDSServerURL() {
+		return threeDSServerURL;
+	}
+	public void setThreeDSServerURL(String threeDSServerURL) {
+		this.threeDSServerURL = threeDSServerURL;
+	}
+	public String getAcquirerBIN() {
+		return acquirerBIN;
+	}
+	public void setAcquirerBIN(String acquirerBIN) {
+		this.acquirerBIN = acquirerBIN;
+	}
+	public String getAcquirerMerchantID() {
+		return acquirerMerchantID;
+	}
+	public void setAcquirerMerchantID(String acquirerMerchantID) {
+		this.acquirerMerchantID = acquirerMerchantID;
+	}
+	public String getBrowserAcceptHeader() {
+		return browserAcceptHeader;
+	}
+	public void setBrowserAcceptHeader(String browserAcceptHeader) {
+		this.browserAcceptHeader = browserAcceptHeader;
+	}
+	public boolean isBrowserJavascriptEnabled() {
+		return browserJavascriptEnabled;
+	}
+	public void setBrowserJavascriptEnabled(boolean browserJavascriptEnabled) {
+		this.browserJavascriptEnabled = browserJavascriptEnabled;
+	}
+	public String getBrowserLanguage() {
+		return browserLanguage;
+	}
+	public void setBrowserLanguage(String browserLanguage) {
+		this.browserLanguage = browserLanguage;
+	}
+	public String getBrowserUserAgent() {
+		return browserUserAgent;
+	}
+	public void setBrowserUserAgent(String browserUserAgent) {
+		this.browserUserAgent = browserUserAgent;
+	}
+	public String getAcctNumber() {
+		return acctNumber;
+	}
+	public void setAcctNumber(String acctNumber) {
+		this.acctNumber = acctNumber;
+	}
+	public String getDeviceChannel() {
+		return deviceChannel;
+	}
+	public void setDeviceChannel(String deviceChannel) {
+		this.deviceChannel = deviceChannel;
+	}
+	public String getDsReferenceNumber() {
+		return dsReferenceNumber;
+	}
+	public void setDsReferenceNumber(String dsReferenceNumber) {
+		this.dsReferenceNumber = dsReferenceNumber;
+	}
+	public String getDsTransID() {
+		return dsTransID;
+	}
+	public void setDsTransID(String dsTransID) {
+		this.dsTransID = dsTransID;
+	}
+	public String getDsURL() {
+		return dsURL;
+	}
+	public void setDsURL(String dsURL) {
+		this.dsURL = dsURL;
+	}
+	public String getMcc() {
+		return mcc;
+	}
+	public void setMcc(String mcc) {
+		this.mcc = mcc;
+	}
+	public String getMerchantCountryCode() {
+		return merchantCountryCode;
+	}
+	public void setMerchantCountryCode(String merchantCountryCode) {
+		this.merchantCountryCode = merchantCountryCode;
+	}
+	public String getMerchantName() {
+		return merchantName;
+	}
+	public void setMerchantName(String merchantName) {
+		this.merchantName = merchantName;
+	}
+	public String getMessageCategor() {
+		return messageCategor;
+	}
+	public void setMessageCategor(String messageCategor) {
+		this.messageCategor = messageCategor;
+	}
+	public String getMessageType() {
+		return messageType;
+	}
+	public void setMessageType(String messageType) {
+		this.messageType = messageType;
+	}
+	public String getMessageVersion() {
+		return messageVersion;
+	}
+	public void setMessageVersion(String messageVersion) {
+		this.messageVersion = messageVersion;
+	}
+	public String getNotificationURL() {
+		return notificationURL;
+	}
+	public void setNotificationURL(String notificationURL) {
+		this.notificationURL = notificationURL;
+	}
+	public String getPurchaseAmount() {
+		return purchaseAmount;
+	}
+	public void setPurchaseAmount(String purchaseAmount) {
+		this.purchaseAmount = purchaseAmount;
+	}
+	public String getPurchaseCurrency() {
+		return purchaseCurrency;
+	}
+	public void setPurchaseCurrency(String purchaseCurrency) {
+		this.purchaseCurrency = purchaseCurrency;
+	}
+	public String getPurchaseDate() {
+		return purchaseDate;
+	}
+	public void setPurchaseDate(String purchaseDate) {
+		this.purchaseDate = purchaseDate;
+	}
+	public String getPurchaseExponent() {
+		return purchaseExponent;
+	}
+	public void setPurchaseExponent(String purchaseExponent) {
+		this.purchaseExponent = purchaseExponent;
+	}
+	public String getMes() {
+		return mes;
+	}
+	public void setMes(String mes) {
+		this.mes = mes;
+	}
+	public String getHomePhone() {
+		return homePhone;
+	}
+	public void setHomePhone(String homePhone) {
+		this.homePhone = homePhone;
+	}
+
+	
+}

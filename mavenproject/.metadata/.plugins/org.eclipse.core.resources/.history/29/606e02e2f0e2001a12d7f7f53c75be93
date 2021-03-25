@@ -1,0 +1,726 @@
+package InterFace;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.Color;
+import javax.swing.JLayeredPane;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+
+import java.awt.CardLayout;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Component;
+import javax.swing.SwingConstants;
+
+import DataToWrite.AReq;
+import DataToWrite.ARes;
+import MultiClientServer.EchoClient;
+import TesttForDataToWrite.Test1;
+
+import javax.swing.ImageIcon;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+
+public class Client {
+
+	private JFrame frame;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JTextField textField_5;
+	private JTextField textField_6;
+	private JTextField textField_7;
+	private JTextField textField_8;
+	private JTextField textField_9;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Client window = new Client();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+
+	public Client() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	public void switchPanel(JLayeredPane layeredPane,JPanel panel) {
+		layeredPane.removeAll();
+		layeredPane.add(panel);
+		layeredPane.repaint();
+		layeredPane.revalidate();
+		
+	}
+
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setForeground(new Color(254,231,21));
+		frame.setBackground(new Color(255, 255, 255));
+		frame.getContentPane().setBackground(new Color(16,24,32));
+		frame.setBounds(100, 100, 1105, 767);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		frame.setLocation(700, 200);
+		frame.setResizable(false);
+		JLabel lblNewLabel = new JLabel("Client Side ");
+		lblNewLabel.setForeground(new Color(255, 255, 0));
+		lblNewLabel.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 35));
+		lblNewLabel.setBounds(428, 11, 352, 52);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JLayeredPane layeredPane = new JLayeredPane();
+		layeredPane.setBounds(0, 102, 1099, 636);
+		frame.getContentPane().add(layeredPane);
+		layeredPane.setLayout(new CardLayout(0, 0));
+		
+		JPanel panel1 = new JPanel();
+		panel1.setBorder(null);
+		panel1.setBackground(new Color(16,24,32));
+		layeredPane.add(panel1, "name_595520792029500");
+		panel1.setLayout(null);
+		
+		JLabel label = new JLabel("Client Side for Acserver Project");
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+		label.setForeground(Color.RED);
+		label.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label.setBounds(329, 43, 480, 52);
+		panel1.add(label);
+		
+		JLabel lblCreatedBy = new JLabel("Created By: ");
+		lblCreatedBy.setHorizontalTextPosition(SwingConstants.LEFT);
+		lblCreatedBy.setVerticalTextPosition(SwingConstants.TOP);
+		lblCreatedBy.setVerticalAlignment(SwingConstants.TOP);
+		lblCreatedBy.setHorizontalAlignment(SwingConstants.LEFT);
+		lblCreatedBy.setForeground(Color.RED);
+		lblCreatedBy.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		lblCreatedBy.setBounds(375, 106, 434, 52);
+		panel1.add(lblCreatedBy);
+		
+		JLabel label_1 = new JLabel("Aubida Naalwa");
+		label_1.setVerticalTextPosition(SwingConstants.TOP);
+		label_1.setVerticalAlignment(SwingConstants.TOP);
+		label_1.setHorizontalTextPosition(SwingConstants.LEFT);
+		label_1.setHorizontalAlignment(SwingConstants.LEFT);
+		label_1.setForeground(Color.RED);
+		label_1.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_1.setBounds(478, 169, 434, 52);
+		panel1.add(label_1);
+		
+		JLabel label_2 = new JLabel("Amro Habib");
+		label_2.setVerticalTextPosition(SwingConstants.TOP);
+		label_2.setVerticalAlignment(SwingConstants.TOP);
+		label_2.setHorizontalTextPosition(SwingConstants.LEFT);
+		label_2.setHorizontalAlignment(SwingConstants.LEFT);
+		label_2.setForeground(Color.RED);
+		label_2.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_2.setBounds(478, 232, 434, 52);
+		panel1.add(label_2);
+		
+		JLabel label_3 = new JLabel("Noor Masarwe");
+		label_3.setVerticalTextPosition(SwingConstants.TOP);
+		label_3.setVerticalAlignment(SwingConstants.TOP);
+		label_3.setHorizontalTextPosition(SwingConstants.LEFT);
+		label_3.setHorizontalAlignment(SwingConstants.LEFT);
+		label_3.setForeground(Color.RED);
+		label_3.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_3.setBounds(478, 295, 434, 52);
+		panel1.add(label_3);
+		
+		JLabel label_4 = new JLabel("Mohamed Zidane");
+		label_4.setVerticalTextPosition(SwingConstants.TOP);
+		label_4.setVerticalAlignment(SwingConstants.TOP);
+		label_4.setHorizontalTextPosition(SwingConstants.LEFT);
+		label_4.setHorizontalAlignment(SwingConstants.LEFT);
+		label_4.setForeground(Color.RED);
+		label_4.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_4.setBounds(478, 358, 240, 52);
+		panel1.add(label_4);
+		
+		JLabel label_5 = new JLabel("Instructor:");
+		label_5.setVerticalTextPosition(SwingConstants.TOP);
+		label_5.setVerticalAlignment(SwingConstants.TOP);
+		label_5.setHorizontalTextPosition(SwingConstants.LEFT);
+		label_5.setHorizontalAlignment(SwingConstants.LEFT);
+		label_5.setForeground(Color.RED);
+		label_5.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_5.setBounds(375, 403, 284, 52);
+		panel1.add(label_5);
+		
+		JLabel label_6 = new JLabel("Illia Dobinsky");
+		label_6.setVerticalTextPosition(SwingConstants.TOP);
+		label_6.setVerticalAlignment(SwingConstants.TOP);
+		label_6.setHorizontalTextPosition(SwingConstants.LEFT);
+		label_6.setHorizontalAlignment(SwingConstants.LEFT);
+		label_6.setForeground(Color.RED);
+		label_6.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_6.setBounds(478, 466, 240, 52);
+		panel1.add(label_6);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(System.getProperty("user.dir")+"\\ClientImage.jpg"));
+		lblNewLabel_1.setBounds(725, 344, 411, 303);
+		panel1.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2.setIcon(new ImageIcon(System.getProperty("user.dir")+"\\ClientImage2.jpg"));
+		lblNewLabel_2.setBounds(0, 0, 1099, 647);
+		panel1.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon(System.getProperty("user.dir")+"\\SERVERIMG.jpg"));
+		lblNewLabel_3.setBounds(0, 0, 1099, 636);
+		
+		JLabel label_30 = new JLabel("");
+		label_30.setBounds(725, 112, 344, 463);
+		panel1.add(label_30);
+		
+		JPanel panel2 = new JPanel();
+		panel2.setBackground(new Color(16,24,32));
+		layeredPane.add(panel2, "name_595522940364100");
+		panel2.setLayout(null);
+		
+		JLabel label_7 = new JLabel("Client Side Demo Test");
+		label_7.setForeground(Color.YELLOW);
+		label_7.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 29));
+		label_7.setBounds(79, 36, 347, 52);
+		panel2.add(label_7);
+		
+		JLabel label_8 = new JLabel("threeDSServerTransID");
+		label_8.setForeground(Color.YELLOW);
+		label_8.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_8.setBounds(10, 120, 281, 23);
+		panel2.add(label_8);
+		
+		JLabel label_9 = new JLabel("acsReferenceNumber");
+		label_9.setForeground(Color.YELLOW);
+		label_9.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_9.setBounds(10, 154, 267, 23);
+		panel2.add(label_9);
+		
+		JLabel label_10 = new JLabel("acsTransId");
+		label_10.setForeground(Color.YELLOW);
+		label_10.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_10.setBounds(10, 188, 164, 23);
+		panel2.add(label_10);
+		
+		JLabel label_11 = new JLabel("authenticationValue");
+		label_11.setForeground(Color.YELLOW);
+		label_11.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_11.setBounds(10, 222, 267, 23);
+		panel2.add(label_11);
+		
+		JLabel label_12 = new JLabel("dsReferenceNumber");
+		label_12.setForeground(Color.YELLOW);
+		label_12.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_12.setBounds(10, 256, 267, 23);
+		panel2.add(label_12);
+		
+		JLabel label_13 = new JLabel("dsTransId");
+		label_13.setForeground(Color.YELLOW);
+		label_13.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_13.setBounds(10, 290, 281, 23);
+		panel2.add(label_13);
+		
+		JLabel label_14 = new JLabel("eci");
+		label_14.setForeground(Color.YELLOW);
+		label_14.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_14.setBounds(10, 324, 164, 23);
+		panel2.add(label_14);
+		
+		JLabel label_15 = new JLabel("messageType");
+		label_15.setForeground(Color.YELLOW);
+		label_15.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_15.setBounds(10, 358, 267, 23);
+		panel2.add(label_15);
+		
+		JLabel label_16 = new JLabel("messageVersion");
+		label_16.setForeground(Color.YELLOW);
+		label_16.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_16.setBounds(10, 392, 281, 23);
+		panel2.add(label_16);
+		
+		JLabel label_17 = new JLabel("transStatus");
+		label_17.setForeground(Color.YELLOW);
+		label_17.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_17.setBounds(10, 426, 267, 23);
+		panel2.add(label_17);
+		
+		JLabel label_18 = new JLabel("transStatusReason");
+		label_18.setForeground(Color.YELLOW);
+		label_18.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_18.setBounds(10, 460, 164, 23);
+		panel2.add(label_18);
+		
+		final JLabel label_19 = new JLabel("");
+		label_19.setBackground(Color.RED);
+		label_19.setForeground(Color.YELLOW);
+		label_19.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_19.setBounds(326, 120, 305, 23);
+		panel2.add(label_19);
+		
+		final JLabel label_20 = new JLabel("");
+		label_20.setForeground(Color.YELLOW);
+		label_20.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_20.setBounds(326, 154, 305, 23);
+		panel2.add(label_20);
+		
+		final JLabel label_21 = new JLabel("");
+		label_21.setForeground(Color.YELLOW);
+		label_21.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_21.setBounds(326, 188, 305, 23);
+		panel2.add(label_21);
+		
+		final JLabel label_22 = new JLabel("");
+		label_22.setForeground(Color.YELLOW);
+		label_22.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_22.setBounds(326, 222, 305, 23);
+		panel2.add(label_22);
+		
+		final JLabel label_23 = new JLabel("");
+		label_23.setForeground(Color.YELLOW);
+		label_23.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_23.setBounds(326, 256, 305, 23);
+		panel2.add(label_23);
+		
+		final JLabel label_24 = new JLabel("");
+		label_24.setForeground(Color.YELLOW);
+		label_24.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_24.setBounds(326, 290, 305, 23);
+		panel2.add(label_24);
+		
+		final JLabel label_25 = new JLabel("");
+		label_25.setForeground(Color.YELLOW);
+		label_25.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_25.setBounds(326, 324, 305, 23);
+		panel2.add(label_25);
+		
+		final JLabel label_26 = new JLabel("");
+		label_26.setForeground(Color.YELLOW);
+		label_26.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_26.setBounds(326, 358, 305, 23);
+		panel2.add(label_26);
+		
+		final JLabel label_27 = new JLabel("");
+		label_27.setForeground(Color.YELLOW);
+		label_27.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_27.setBounds(326, 392, 305, 23);
+		panel2.add(label_27);
+		
+		final JLabel label_28 = new JLabel("");
+		label_28.setForeground(Color.YELLOW);
+		label_28.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_28.setBounds(326, 426, 305, 23);
+		panel2.add(label_28);
+		
+		final JLabel label_29 = new JLabel("");
+		label_29.setForeground(Color.YELLOW);
+		label_29.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		label_29.setBounds(326, 460, 305, 23);
+		panel2.add(label_29);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(628, 36, 441, 585);
+		panel2.add(scrollPane);
+		final JTextArea textField = new JTextArea();
+		textField.setForeground(new Color(254, 231, 21));
+		textField.setBackground(new Color(16,24,32));
+		textField.setEditable(false);
+		textField.setFont(new Font("Serif", Font.BOLD | Font.ITALIC, 20));
+		scrollPane.setViewportView(textField);
+		
+		final EchoClient ec = new EchoClient();
+		textField.setText("StartingClient ........\n");
+		JButton button_1 = new JButton("TEST");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				ARes ares = ec.runClient(textField);
+				label_19.setText(ares.getThreeDSServerTransID());
+				label_20.setText(ares.getAcsReferenceNumber());
+				label_21.setText(ares.getAcsTransId());
+				label_22.setText(ares.getAuthenticationValue());
+				label_23.setText(ares.getDsReferenceNumber());
+				label_24.setText(ares.getDsTransId());
+				label_25.setText(ares.getEci());
+				label_26.setText(ares.getMessageType());
+				label_27.setText(ares.getMessageVersion());
+				label_28.setText(ares.getTransStatus());
+				label_29.setText(ares.getTransStatusReason());
+				
+				
+				
+			}
+		});
+		button_1.setVerifyInputWhenFocusTarget(false);
+		button_1.setHideActionText(true);
+		button_1.setForeground(new Color(254, 231, 21));
+		button_1.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 19));
+		button_1.setContentAreaFilled(false);
+		button_1.setBorderPainted(false);
+		button_1.setBorder(null);
+		button_1.setBackground(new Color(153, 102, 204));
+		button_1.setAlignmentX(0.5f);
+		button_1.setBounds(178, 525, 126, 52);
+		panel2.add(button_1);
+		
+
+		panel2.add(lblNewLabel_3);
+		
+		JPanel panel3 = new JPanel();
+		panel3.setLayout(null);
+		panel3.setBackground(new Color(16, 24, 32));
+		layeredPane.add(panel3, "name_704250147995700");
+		
+		JLabel label_31 = new JLabel("Sending Areq ");
+		label_31.setForeground(Color.YELLOW);
+		label_31.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 29));
+		label_31.setBounds(178, 36, 212, 52);
+		panel3.add(label_31);
+		
+		JLabel lblAccnumber = new JLabel("AccNumber");
+		lblAccnumber.setForeground(Color.YELLOW);
+		lblAccnumber.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		lblAccnumber.setBounds(10, 120, 281, 23);
+		panel3.add(lblAccnumber);
+		
+		JLabel lblAcquirebin = new JLabel("AcquireBin");
+		lblAcquirebin.setForeground(Color.YELLOW);
+		lblAcquirebin.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		lblAcquirebin.setBounds(10, 154, 267, 23);
+		panel3.add(lblAcquirebin);
+		
+		JLabel lblAcquirermerchantid = new JLabel("AcquirerMerchantID");
+		lblAcquirermerchantid.setForeground(Color.YELLOW);
+		lblAcquirermerchantid.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		lblAcquirermerchantid.setBounds(10, 188, 281, 23);
+		panel3.add(lblAcquirermerchantid);
+		
+		JLabel lblDsreferencenumber = new JLabel("DsReferenceNumber");
+		lblDsreferencenumber.setForeground(Color.YELLOW);
+		lblDsreferencenumber.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		lblDsreferencenumber.setBounds(10, 222, 267, 23);
+		panel3.add(lblDsreferencenumber);
+		
+		JLabel lblDstransid = new JLabel("DsTransID");
+		lblDstransid.setForeground(Color.YELLOW);
+		lblDstransid.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		lblDstransid.setBounds(10, 256, 267, 23);
+		panel3.add(lblDstransid);
+		
+		JLabel lblPurchaseamount = new JLabel("PurchaseAmount");
+		lblPurchaseamount.setForeground(Color.YELLOW);
+		lblPurchaseamount.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		lblPurchaseamount.setBounds(10, 290, 281, 23);
+		panel3.add(lblPurchaseamount);
+		
+		JLabel lblPurchasecurrency = new JLabel("PurchaseCurrency");
+		lblPurchasecurrency.setForeground(Color.YELLOW);
+		lblPurchasecurrency.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		lblPurchasecurrency.setBounds(10, 324, 267, 23);
+		panel3.add(lblPurchasecurrency);
+		
+		JLabel lblPurchasedate = new JLabel("PurchaseDate");
+		lblPurchasedate.setForeground(Color.YELLOW);
+		lblPurchasedate.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		lblPurchasedate.setBounds(10, 358, 267, 23);
+		panel3.add(lblPurchasedate);
+		
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(648, 36, 441, 585);
+		panel3.add(scrollPane_1);
+		
+		JTextArea textArea = new JTextArea();
+		scrollPane_1.setViewportView(textArea);
+		textArea.setText("StartingClient ........\n");
+		textArea.setForeground(new Color(254, 231, 21));
+		textArea.setFont(new Font("Serif", Font.BOLD | Font.ITALIC, 20));
+		textArea.setBackground(new Color(16, 24, 32));
+		
+		JButton btnSendAreqTo = new JButton("SEND AREQ TO ACS");
+		btnSendAreqTo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Test1 t = new Test1();
+				if(textField_2.getText().equals("")|| textField_3.getText().equals("")|| textField_1.getText().equals("")|| textField_4.getText().equals("")||  textField_5.getText().equals("")||  textField_6.getText().equals("")|| textField_7.getText().equals("")||  textField_8.getText().equals("")) {
+					JOptionPane.showMessageDialog(frame,
+						    "Missing fields ,please fill them.",
+						    "ERROR",
+						    JOptionPane.ERROR_MESSAGE);
+				}else if(textField_9.getText().length() < 9 || textField_9.getText().length() >10) {
+					JOptionPane.showMessageDialog(frame,
+						    "error at Phone Number.",
+						    "ERROR",
+						    JOptionPane.ERROR_MESSAGE);
+				}
+				else {
+				
+				AReq areq = t.AReqCreator(textField_2.getText(), textField_3.getText(), textField_1.getText(), textField_4.getText(),  textField_5.getText(),  textField_6.getText(),  textField_7.getText(),  textField_8.getText(),textField_9.getText());
+				ARes ares = ec.RunClient(textArea,areq);
+				if (ares != null) {
+					textField_2.setText("");
+					textField_1.setText("");
+					textField_3.setText("");
+					textField_4.setText("");
+					textField_5.setText("");
+					textField_6.setText("");
+					textField_7.setText("");
+					textField_8.setText("");
+					textField_9.setText("");
+				}
+			}
+			}
+		});
+		btnSendAreqTo.setVerifyInputWhenFocusTarget(false);
+		btnSendAreqTo.setHideActionText(true);
+		btnSendAreqTo.setForeground(new Color(254, 231, 21));
+		btnSendAreqTo.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 19));
+		btnSendAreqTo.setContentAreaFilled(false);
+		btnSendAreqTo.setBorderPainted(false);
+		btnSendAreqTo.setBorder(null);
+		btnSendAreqTo.setBackground(new Color(153, 102, 204));
+		btnSendAreqTo.setAlignmentX(0.5f);
+		btnSendAreqTo.setBounds(178, 525, 267, 52);
+		panel3.add(btnSendAreqTo);
+		
+		JLabel label_54 = new JLabel("");
+		
+		label_54.setBounds(0, 0, 1099, 636);
+		panel3.add(label_54);
+		
+		textField_1 = new JTextField();
+		textField_1.addKeyListener(new KeyAdapter() {
+
+			@Override
+			public void keyTyped(KeyEvent e) {
+				char c = e.getKeyChar();
+			      if (!((c >= '0') && (c <= '9') ||
+			         (c == KeyEvent.VK_BACK_SPACE) ||
+			         (c == KeyEvent.VK_DELETE))) {
+			       
+			        e.consume();
+			      }
+			}
+		});
+		textField_1.setFont(new Font("Segoe UI Historic", Font.BOLD | Font.ITALIC, 16));
+		textField_1.setBounds(325, 120, 293, 23);
+		panel3.add(textField_1);
+		textField_1.setColumns(10);
+		
+		textField_2 = new JTextField();
+		textField_2.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				char c = e.getKeyChar();
+			      if (!((c >= '0') && (c <= '9') ||
+			         (c == KeyEvent.VK_BACK_SPACE) ||
+			         (c == KeyEvent.VK_DELETE))) {
+			       
+			        e.consume();
+			      }
+			
+			}
+
+
+		});
+		textField_2.setFont(new Font("Segoe UI Historic", Font.BOLD | Font.ITALIC, 16));
+		textField_2.setColumns(10);
+		textField_2.setBounds(325, 154, 293, 23);
+		panel3.add(textField_2);
+		
+		textField_3 = new JTextField();
+		textField_3.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				char c = e.getKeyChar();
+			      if (!((c >= '0') && (c <= '9') ||
+			         (c == KeyEvent.VK_BACK_SPACE) ||
+			         (c == KeyEvent.VK_DELETE))) {
+			       
+			        e.consume();
+			      }
+			}
+		});
+		textField_3.setFont(new Font("Segoe UI Historic", Font.BOLD | Font.ITALIC, 16));
+		textField_3.setColumns(10);
+		textField_3.setBounds(325, 188, 293, 23);
+		panel3.add(textField_3);
+		
+		textField_4 = new JTextField();
+		textField_4.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				char c = e.getKeyChar();
+			      if (!((c >= '0') && (c <= '9') ||
+			         (c == KeyEvent.VK_BACK_SPACE) ||
+			         (c == KeyEvent.VK_DELETE))) {
+			       
+			        e.consume();
+			      }
+			}
+		});
+		textField_4.setFont(new Font("Segoe UI Historic", Font.BOLD | Font.ITALIC, 16));
+		textField_4.setColumns(10);
+		textField_4.setBounds(325, 222, 293, 23);
+		panel3.add(textField_4);
+		
+		textField_5 = new JTextField();
+		textField_5.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				char c = e.getKeyChar();
+			      if (!((c >= '0') && (c <= '9') ||
+			         (c == KeyEvent.VK_BACK_SPACE) ||
+			         (c == KeyEvent.VK_DELETE))) {
+			       
+			        e.consume();
+			      }
+			}
+		});
+		textField_5.setFont(new Font("Segoe UI Historic", Font.BOLD | Font.ITALIC, 16));
+		textField_5.setColumns(10);
+		textField_5.setBounds(325, 256, 293, 23);
+		panel3.add(textField_5);
+		
+		textField_6 = new JTextField();
+		textField_6.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				char c = e.getKeyChar();
+			      if (!((c >= '0') && (c <= '9') ||
+			         (c == KeyEvent.VK_BACK_SPACE) ||
+			         (c == KeyEvent.VK_DELETE))) {
+			       
+			        e.consume();
+			      }
+			}
+		});
+		textField_6.setFont(new Font("Segoe UI Historic", Font.BOLD | Font.ITALIC, 16));
+		textField_6.setColumns(10);
+		textField_6.setBounds(325, 290, 293, 23);
+		panel3.add(textField_6);
+		
+		textField_7 = new JTextField();
+		textField_7.setFont(new Font("Segoe UI Historic", Font.BOLD | Font.ITALIC, 16));
+		textField_7.setColumns(10);
+		textField_7.setBounds(325, 324, 293, 23);
+		panel3.add(textField_7);
+		
+		textField_8 = new JTextField();
+		textField_8.setFont(new Font("Segoe UI Historic", Font.BOLD | Font.ITALIC, 16));
+		textField_8.setColumns(10);
+		textField_8.setBounds(325, 358, 293, 23);
+		panel3.add(textField_8);
+		
+		JLabel lblPhonenumber = new JLabel("PhoneNumber");
+		lblPhonenumber.setForeground(Color.YELLOW);
+		lblPhonenumber.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 24));
+		lblPhonenumber.setBounds(10, 392, 267, 23);
+		panel3.add(lblPhonenumber);
+		
+		//phone Number
+		textField_9 = new JTextField();
+		textField_9.setFont(new Font("Segoe UI Historic", Font.BOLD | Font.ITALIC, 16));
+		textField_9.setColumns(10);
+		textField_9.setBounds(325, 392, 293, 23);
+		textField_9.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				char c = e.getKeyChar();
+			      if (!((c >= '0') && (c <= '9') ||
+			         (c == KeyEvent.VK_BACK_SPACE) ||
+			         (c == KeyEvent.VK_DELETE))) {
+			       
+			        e.consume();
+			      }
+			}
+		});
+		panel3.add(textField_9);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon(System.getProperty("user.dir")+"\\Clientimg3.jpg"));
+		lblNewLabel_4.setBounds(0, 0, 1099, 636);
+		panel3.add(lblNewLabel_4);
+		
+
+		
+
+		
+
+
+		JButton btnNewButton = new JButton("HOME ");
+		btnNewButton.setContentAreaFilled(false);
+		btnNewButton.setBorderPainted(false);
+		btnNewButton.setHideActionText(true);
+		btnNewButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+		btnNewButton.setVerifyInputWhenFocusTarget(false);
+		btnNewButton.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 14));
+		btnNewButton.setForeground(new Color(254,231,21));
+		btnNewButton.setBorder(null);
+		btnNewButton.setBackground(new Color(16,24,32));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				switchPanel(layeredPane, panel1);
+			}
+		});
+		btnNewButton.setBounds(10, 73, 89, 23);
+		frame.getContentPane().add(btnNewButton);
+		
+		JButton button = new JButton("Send Files");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				switchPanel(layeredPane, panel2);
+			}
+		});
+		button.setVerifyInputWhenFocusTarget(false);
+		button.setForeground(new Color(254, 231, 21));
+		button.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 14));
+		button.setContentAreaFilled(false);
+		button.setBorder(null);
+		button.setBackground(new Color(16, 24, 32));
+		button.setAlignmentX(0.5f);
+		button.setBounds(109, 74, 89, 23);
+		frame.getContentPane().add(button);
+		
+		JButton button_2 = new JButton("New AReq");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				switchPanel(layeredPane, panel3);
+			}
+		});
+		button_2.setVerifyInputWhenFocusTarget(false);
+		button_2.setForeground(new Color(254, 231, 21));
+		button_2.setFont(new Font("Segoe Print", Font.BOLD | Font.ITALIC, 14));
+		button_2.setContentAreaFilled(false);
+		button_2.setBorder(null);
+		button_2.setBackground(new Color(16, 24, 32));
+		button_2.setAlignmentX(0.5f);
+		button_2.setBounds(222, 73, 89, 23);
+		frame.getContentPane().add(button_2);
+		//switchPanel(layeredPane,panel1);
+	}
+}

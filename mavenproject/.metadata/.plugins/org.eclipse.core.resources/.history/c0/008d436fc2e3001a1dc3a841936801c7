@@ -1,0 +1,28 @@
+package maven.maven;
+
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
+import FrictionlessFlow.*;
+import org.junit.Test;
+
+import DataToWrite.AReq;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest 
+{
+    /**
+     * Rigorous Test :-)
+     */
+    @Test
+    public void checkFlow()
+    {
+        assertTrue( true );
+        CheckingAReq ck =new CheckingAReq();
+        assertSame(ck.checkAReq(new AReq()), new AReq());
+    }
+    
+
+    
+}

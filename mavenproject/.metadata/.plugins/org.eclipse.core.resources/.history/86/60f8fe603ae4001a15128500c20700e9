@@ -1,0 +1,50 @@
+package maven.maven;
+
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
+import FrictionlessFlow.*;
+import TesttForDataToWrite.Test1;
+
+import org.junit.Test;
+
+import ConnectToMySQl.Sql;
+import DataToWrite.AReq;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest 
+{
+    /**
+     * Rigorous Test :-)
+     */
+    @Test
+    public void checkFlow()
+    {
+        assertTrue( true );
+        CheckingAReq ck =new CheckingAReq();
+        AReq areq = new Test1().AReqCreator("123", "123", "123", "123344", "12554", "500", "11222", "2020", "0521234567");
+        
+        assertSame(ck.checkAReq(areq).getTransStatus(), "C");
+        areq.setPurchaseAmount("199");
+        areq.setAcctNumber("53261033005566");
+        assertSame(ck.checkAReq(areq).getTransStatus(), "Y");
+        areq.setPurchaseAmount("201");
+        assertSame(ck.checkAReq(areq).getTransStatus(), "C");
+        areq.setPurchaseAmount("1001");
+        assertSame(ck.checkAReq(areq).getTransStatus(), "N");
+        areq.setPurchaseAmount("1001");
+        areq.setAcctNumber("55661122211");
+        assertSame(ck.checkAReq(areq).getTransStatus(), "N");
+        
+    }
+    
+    @Test
+    public void checkDbFlow() {
+    	Sql sql = new Sql();
+    	AReq areq = new Test1().AReqCreator("123", "123", "123", "123344", "12554", "500", "11222", "2020", "0521234567");
+    	
+    	
+    }
+    
+}

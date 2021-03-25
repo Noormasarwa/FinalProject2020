@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<httml>
+    <head>
+<link rel="shortcut icon" href="">
+        <title>
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <img src="https://img.icons8.com/doodle/48/000000/lock--v1.png"/>
+    </head>
+<body onload="startTime()">
+
+<div id="txt" ></div>
+
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  // add a zero in front of numbers<10
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+  var t = setTimeout(function(){ startTime() }, 500);
+}
+
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+</script>
+        <br><br><br><br><br><br>
+    <div>
+
+      <form id ="authform">
+
+            <h1> ENTER the Password</h1>
+            <input type="text" id="password" autocomplete="off">
+            <br>
+            <input type="submit" value="authenticate" id ="authenticatee">
+
+            </form>
+        <p id="responsee"></p>
+        <script type="text/javascript" src="main.js"></script>
+
+    </body>
+
+</httml>

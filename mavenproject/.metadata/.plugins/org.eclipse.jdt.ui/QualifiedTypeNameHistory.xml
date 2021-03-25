@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+    <fullyQualifiedTypeName name="java.net.URL"/>
+    <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="JasonEditor.Jackson"/>
+    <fullyQualifiedTypeName name="FrictionlessFlow.CheckingAReq"/>
+    <fullyQualifiedTypeName name="DataToWrite.AReq"/>
+    <fullyQualifiedTypeName name="TesttForDataToWrite.Test1"/>
+    <fullyQualifiedTypeName name="ConnectToMySQl.Sql"/>
+    <fullyQualifiedTypeName name="DataToWrite.ARes"/>
+    <fullyQualifiedTypeName name="junit.framework.Assert"/>
+    <fullyQualifiedTypeName name="TesttForDataToWrite.Httpsend"/>
+    <fullyQualifiedTypeName name="DataToWrite.CReq"/>
+</qualifiedTypeNameHistroy>
